@@ -29,6 +29,15 @@
         if (this.leafletLayer) {
           this.leafletMap.removeLayer(this.leafletLayer)
         }
+
+        // aded a base layer
+        this.leafletLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", 
+                                        {
+                                          "attribution": "<a target=\"blank\" href=\"https://geodaten.bayern.de/opengeodata\">geodaten.bayern.de / Digitale farbige Orthophotos 2022 (DOP40)</a>",
+                                          "minZoom": 10,
+                                          "maxZoom": 18
+                                        }).addTo(this.leafletMap)
+
         this.leafletLayer = L.tileLayer(this.map.url, this.map.options).addTo(this.leafletMap)
       },
       changeView: function() {

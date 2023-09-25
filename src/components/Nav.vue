@@ -14,10 +14,11 @@
       </div>
 
       <div class="nav-right">
+        <!--
         <form @submit.prevent="searchLocation()">
           <input class="search-input" type="search" placeholder="Adresse suchen" v-model="searchString" />
         </form>
-
+        -->
         <select class="map-select" v-model="currentMapIndex" @update="changeMap(index)">
           <option v-for="(map, index) in maps" :key="index" :value="index">
             {{ map.name }}
@@ -76,7 +77,7 @@
     methods: {
       searchLocation: function() {
         if (this.searchString) {
-          const url = 'https://nominatim.openstreetmap.org/search?format=json&q=Berlin ' + encodeURIComponent(this.searchString)
+          const url = 'https://nominatim.openstreetmap.org/search?format=json&q=Muenchen ' + encodeURIComponent(this.searchString)
           fetch(url)
             .then(response => response.json())
             .then(json => {
@@ -93,7 +94,7 @@
         this.$emit('changeMap', index)
       },
       getBackgroundImage: function(map) {
-        return map.url.replace(/\{z\}\/\{x\}\/\{y\}/i, '16/35198/21494')
+        return map.url.replace(/\{z\}\/\{x\}\/\{y\}/i, '16/34876/22741')
       },
       getYear: function(map) {
         return map.name.split(' ')[1]
@@ -124,7 +125,7 @@
         display: flex;
         gap: 10px;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
       }
     }
 
@@ -204,7 +205,7 @@
       background-size: cover;
       background-position: center;
 
-      width: 300px;
+      width: 400px;
       height: 80px;
 
       &:hover {
