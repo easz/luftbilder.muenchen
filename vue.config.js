@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: './',
+  publicPath: '/luftbilder.muenchen/',
   chainWebpack: config => {
   config
     .plugin('html')
