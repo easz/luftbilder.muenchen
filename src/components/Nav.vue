@@ -14,11 +14,9 @@
       </div>
 
       <div class="nav-right">
-        <!--
         <form @submit.prevent="searchLocation()">
           <input class="search-input" type="search" placeholder="Adresse suchen" v-model="searchString" />
         </form>
-        -->
         <select class="map-select" v-model="currentMapIndex" @update="changeMap(index)">
           <option v-for="(map, index) in maps" :key="index" :value="index">
             {{ map.name }}
