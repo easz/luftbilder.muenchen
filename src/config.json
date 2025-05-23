@@ -12,6 +12,15 @@
     },
     "maps": [
         {
+            "name": "Luftbilder 2024",
+            "url": "https://raw.githubusercontent.com/easz/by_dop20c_Y2024/main/{z}/{x}/{y}.png",
+            "options": {
+                "attribution": "<a target=\"blank\" href=\"https://geodaten.bayern.de/opengeodata\">geodaten.bayern.de / Digitale farbige Orthophotos 2022 (DOP40)</a>",
+                "minZoom": 10,
+                "maxZoom": 18
+            }
+        },
+        {
             "name": "Luftbilder 2022",
             "url": "https://raw.githubusercontent.com/easz/by_dop40c_Y2022/main/{z}/{x}/{y}.png",
             "options": {
