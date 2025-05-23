@@ -1,11 +1,11 @@
 {
     "brand": {
-        "text": "luftbilder.meunchen",
-        "href": "https://easz.github.io/luftbilder.meunchen"
+        "text": "luftbilder.muenchen",
+        "href": "https://easz.github.io/luftbilder.muenchen"
     },
     "view": {
         "center": [
-            48.13743, 
+            48.13743,
             11.57549
         ],
         "zoom": 13
